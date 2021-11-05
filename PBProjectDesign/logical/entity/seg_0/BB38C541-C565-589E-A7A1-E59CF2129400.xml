@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB38C541-C565-589E-A7A1-E59CF2129400" name="Genre">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:04:40 UTC</createdTime>
+<ownerDesignName>PBProjectDesign</ownerDesignName>
+<engineerTo>
+<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="82C22440-FE9B-0B52-FF90-28C7769616DD">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:04:56 UTC</createdTime>
+<ownerDesignName>PBProjectDesign</ownerDesignName>
+<engineerTo>
+<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="8F4F567B-47D5-F1E1-34E4-82F711F96288">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:05:24 UTC</createdTime>
+<ownerDesignName>PBProjectDesign</ownerDesignName>
+<engineerTo>
+<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C02E70AD-FDC8-FDF6-5052-B0579F039011" name="Genre PK">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:05:12 UTC</createdTime>
+<ownerDesignName>PBProjectDesign</ownerDesignName>
+<engineerTo>
+<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>82C22440-FE9B-0B52-FF90-28C7769616DD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

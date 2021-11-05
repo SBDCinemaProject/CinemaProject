@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="53104309-B39A-FAD4-9273-FFC03C8E9445" name="UserReview">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:24:13 UTC</createdTime>
+<ownerDesignName>PBProjectDesign</ownerDesignName>
+<engineerTo>
+<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="UserId" id="2955B26D-83B7-C68B-CB88-447EB81562E5">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:24:21 UTC</createdTime>
+<ownerDesignName>PBProjectDesign</ownerDesignName>
+<engineerTo>
+<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ReviewId" id="25B12F4D-7FB6-203A-92D4-4A8BF62CD0E3">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:25:12 UTC</createdTime>
+<ownerDesignName>PBProjectDesign</ownerDesignName>
+<engineerTo>
+<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8D1DDCAE-D690-647E-482B-583F13D3DC51" name="UserReview PK">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:40:00 UTC</createdTime>
+<ownerDesignName>PBProjectDesign</ownerDesignName>
+<engineerTo>
+<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>
