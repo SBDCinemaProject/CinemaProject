@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F83E3731-9287-BC98-2C80-709213DA2CF1" name="Review">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8A2795D-40C1-F24B-B70A-5089FF988BB9" name="Screening">
 <createdBy>Kosiarz</createdBy>
-<createdTime>2021-10-31 17:08:54 UTC</createdTime>
+<createdTime>2021-11-11 12:35:59 UTC</createdTime>
 <ownerDesignName>PBProjectDesign</ownerDesignName>
 <engineerTo>
 <item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="E7452081-8496-ECE6-534D-9850B619DDF7">
+<Attribute name="Id" id="9FDF3B16-4B5D-B2F1-2D42-96E6AC9EB02F">
 <createdBy>Kosiarz</createdBy>
-<createdTime>2021-10-31 17:09:01 UTC</createdTime>
+<createdTime>2021-11-11 12:36:08 UTC</createdTime>
 <ownerDesignName>PBProjectDesign</ownerDesignName>
 <engineerTo>
 <item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
@@ -27,35 +27,9 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Content" id="0A66724D-1334-DC2C-2D0B-26AC7C121567">
+<Attribute name="Date" id="C4912564-703F-ABCD-7550-1C4EE5ED46CD">
 <createdBy>Kosiarz</createdBy>
-<createdTime>2021-10-31 17:09:23 UTC</createdTime>
-<ownerDesignName>PBProjectDesign</ownerDesignName>
-<engineerTo>
-<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Rating" id="E7A91BC9-82E9-2706-8C94-124D0A537B02">
-<createdBy>Kosiarz</createdBy>
-<createdTime>2021-10-31 17:10:11 UTC</createdTime>
-<ownerDesignName>PBProjectDesign</ownerDesignName>
-<engineerTo>
-<item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="CreationDate" id="AAD8BB09-A09F-C038-B8DF-69261B5E8C0D">
-<createdBy>Kosiarz</createdBy>
-<createdTime>2021-10-31 17:10:41 UTC</createdTime>
+<createdTime>2021-11-11 12:36:34 UTC</createdTime>
 <ownerDesignName>PBProjectDesign</ownerDesignName>
 <engineerTo>
 <item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
@@ -68,16 +42,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="CD0B2E08-DEA1-9B9E-70C9-28DC999A004A" name="Review PK">
+<identifier id="7B702442-1F8E-D2D3-A85B-9B40F7A2717F" name="Screening PK">
 <createdBy>Kosiarz</createdBy>
-<createdTime>2021-10-31 17:09:21 UTC</createdTime>
+<createdTime>2021-11-11 12:37:39 UTC</createdTime>
 <ownerDesignName>PBProjectDesign</ownerDesignName>
 <engineerTo>
 <item key="34944B94-9C29-844B-B2CC-9DEF0804ACD1" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>E7452081-8496-ECE6-534D-9850B619DDF7</attributeRef>
+<attributeRef>9FDF3B16-4B5D-B2F1-2D42-96E6AC9EB02F</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
