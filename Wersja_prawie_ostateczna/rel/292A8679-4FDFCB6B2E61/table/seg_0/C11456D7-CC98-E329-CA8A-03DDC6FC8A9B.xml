@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C11456D7-CC98-E329-CA8A-03DDC6FC8A9B" name="Review">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>F83E3731-9287-BC98-2C80-709213DA2CF1</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Review_Id" id="BF29EFD9-57D2-198A-39E1-A86148008340">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>E7452081-8496-ECE6-534D-9850B619DDF7</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Content" id="385EEDFD-CBCD-FD5C-7533-5E8CE241E858">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>0A66724D-1334-DC2C-2D0B-26AC7C121567</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rating" id="E8F6B7DD-AA6E-A2AA-2C85-4F2945FD742D">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>E7A91BC9-82E9-2706-8C94-124D0A537B02</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CreationDate" id="32DFE213-8188-07D9-1D00-A885B76AA286">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>AAD8BB09-A09F-C038-B8DF-69261B5E8C0D</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Movie_Movie_Id" id="3F21F393-24F8-BA7C-39F2-0630FB4A8DF3">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>386164DB-477A-6467-DCA0-DCEC142861D5</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B199529B-FAAC-DD75-F07C-177C7C2001BC" referredColumn="AEC47C8B-3BD9-B37D-2133-F34B7E5918AD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7DD7695E-AC22-FDC1-5AE4-84165F69C02D" name="Review_PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>CD0B2E08-DEA1-9B9E-70C9-28DC999A004A</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF29EFD9-57D2-198A-39E1-A86148008340"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B69DACD7-7AA7-D9A5-2D1A-D5B4A9A40D5B" name="Review_Movie_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>7216C670-21B2-5635-AB44-F8CFF63BA986</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F21F393-24F8-BA7C-39F2-0630FB4A8DF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

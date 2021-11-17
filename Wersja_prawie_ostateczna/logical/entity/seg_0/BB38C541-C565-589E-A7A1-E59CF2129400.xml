@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB38C541-C565-589E-A7A1-E59CF2129400" name="Genre">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:04:40 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Genre_ID" id="82C22440-FE9B-0B52-FF90-28C7769616DD">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:04:56 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="8F4F567B-47D5-F1E1-34E4-82F711F96288">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:05:24 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C02E70AD-FDC8-FDF6-5052-B0579F039011" name="Genre PK">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-10-31 17:05:12 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>82C22440-FE9B-0B52-FF90-28C7769616DD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

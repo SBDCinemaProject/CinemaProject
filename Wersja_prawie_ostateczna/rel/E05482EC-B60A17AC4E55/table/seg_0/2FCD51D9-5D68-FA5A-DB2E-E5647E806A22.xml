@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2FCD51D9-5D68-FA5A-DB2E-E5647E806A22" name="Ticket">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>7DC84F63-2C22-32E0-918F-19B3E8B393F4</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="User_User_Id" id="2ADCC0C2-DC7F-D459-A635-183D7A54A490">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>C79E28B2-07D9-155B-8730-9BA156423D10</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CA0DA55B-E85A-6936-4F54-4AE9FCD2728F" referredColumn="E399989C-E055-5A45-DE8E-51B8F397D5D5"/>
+</associations>
+</Column>
+<Column name="Screening_Screening_Id" id="A18A3D5F-E74F-3A7B-847F-CA531CD18672">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>F4CBC0AB-0206-4F1F-010B-54FD4B1AF8CF</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4F8B9AD0-F020-89C1-B1BC-8FD6428B79B0" referredColumn="C45921BE-2CA9-2EB0-54F7-B23321F8BC62"/>
+</associations>
+</Column>
+<Column name="Price" id="4C2A3B0C-9959-B795-1BB9-C1F4A079A3A7">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>43966F4A-7676-2B54-54B6-7FE1D0C40F8C</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Date" id="2D6E1AA5-1A3E-2A6B-1BFC-B9E1F065E675">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>54CE4C14-ACAF-1285-DE39-108F57038EF0</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF35B4B1-C217-376F-6A8B-8258F8C790BF" name="Ticket_PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>DB6CCE08-9DF8-4E4C-E679-0324B207C2CD</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2ADCC0C2-DC7F-D459-A635-183D7A54A490"/>
+<colUsage columnID="A18A3D5F-E74F-3A7B-847F-CA531CD18672"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40B4530B-7EC5-8B79-42A8-7D4373B5DA0D" name="Ticket_User_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>217AFB7B-72A4-0968-B7BE-91A739BAFD8B</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2ADCC0C2-DC7F-D459-A635-183D7A54A490"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1BF09E6B-0542-383C-5BD2-C05972286428" name="Ticket_Screening_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>90EC5B5C-9F1E-C702-31CF-A2C4C882383B</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A18A3D5F-E74F-3A7B-847F-CA531CD18672"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

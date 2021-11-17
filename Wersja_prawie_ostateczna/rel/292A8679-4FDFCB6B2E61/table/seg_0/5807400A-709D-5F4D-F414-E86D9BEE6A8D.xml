@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5807400A-709D-5F4D-F414-E86D9BEE6A8D" name="Room">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>5C9E2805-BC4C-55BE-3B2D-7E4924337764</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Room_Id" id="C0E949DA-6D70-2ECC-1286-0D22209CA490">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>DB4FD046-E37E-4C37-9113-459469D03D54</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="F945DE50-098E-221B-AA0D-BBFDD7FA4258">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>48BA2AED-F9C7-0F6E-E53A-301A87C02B75</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Capacity" id="43079A90-1F3E-15A2-00A1-973291680281">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>915E2759-06B0-0BB4-19FA-3229719C5701</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B2CBA6B3-082E-E059-0AE5-9C6D19724F5B" name="Room_PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>0EC94E45-50A9-A489-56DC-744F691A66F8</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0E949DA-6D70-2ECC-1286-0D22209CA490"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

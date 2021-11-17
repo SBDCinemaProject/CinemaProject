@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5544A2A1-F6F0-C5D1-C803-D17FC9915B68" name="Archive">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>D049C425-2B5E-F2FB-2F04-97239B219EE4</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Movie_Movie_Id" id="BD2EED0F-299A-8120-6B94-B524D78A3BF2">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>E806DA93-D476-EB84-F214-B20DC364BDF3</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1997B98-C118-4E3B-AFE5-636A4872220B" referredColumn="4175967C-EB81-366C-81A6-1E9F9FAFF746"/>
+</associations>
+</Column>
+<Column name="User_User_Id" id="B529CAC6-0BBF-BDD5-1008-5B19AB1B9060">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>E915CA9C-A07D-846D-78C2-99F2961339C0</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5D50F71E-B318-6C8E-5050-84A7BD101784" referredColumn="E399989C-E055-5A45-DE8E-51B8F397D5D5"/>
+</associations>
+</Column>
+<Column name="Archive_Id" id="7EFA30E8-9D14-A7B0-7F98-2106717895E4">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>E376F785-8BAF-29E7-6E65-DDD4134B5E65</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF7F9984-8DF4-D642-3E6C-CB008DB30FBD" name="Archive_PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>E2243A6A-D9F9-CA4A-8D61-1CEEE8029417</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EFA30E8-9D14-A7B0-7F98-2106717895E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8805A1D8-EA2F-89E8-7FEE-201A54DFE62B" name="Archive_Movie_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>3C4A50F8-7B07-9CE5-E858-E668E54EB8F1</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD2EED0F-299A-8120-6B94-B524D78A3BF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A499F588-D50B-697C-C12C-20F5F3F68EB3" name="Archive_User_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>BCCD0792-A26B-42DC-76CF-6CB505291146</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B529CAC6-0BBF-BDD5-1008-5B19AB1B9060"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

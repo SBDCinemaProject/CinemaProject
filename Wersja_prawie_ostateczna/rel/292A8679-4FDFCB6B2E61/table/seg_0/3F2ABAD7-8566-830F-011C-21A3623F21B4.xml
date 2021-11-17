@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F2ABAD7-8566-830F-011C-21A3623F21B4" name="Screening">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>D8A2795D-40C1-F24B-B70A-5089FF988BB9</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Screening_Id" id="DA03C03F-5FCF-AF62-C82A-55A8049F7BB6">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>9FDF3B16-4B5D-B2F1-2D42-96E6AC9EB02F</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Room_Room_Id" id="28F6A707-DCF5-8EB4-2250-CA594A9BD029">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>B1AA678F-9B36-4BC7-63A3-960320F73FAE</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52216C3A-A9ED-E207-8934-FAA9F331F41F" referredColumn="C0E949DA-6D70-2ECC-1286-0D22209CA490"/>
+</associations>
+</Column>
+<Column name="Cinema_Cinema_Id" id="67C88CF6-3CD1-26FB-F9D9-9493CBF54D22">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>20B2BCA2-2C93-0B19-C36C-3553F512E8BB</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A74F549E-CDF5-B733-E2FD-7E2DAA0CA798" referredColumn="DF2E19FC-0B35-4462-C153-D82F94169074"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F6B856D6-C48F-FB0C-78EB-9A3BD06B83FF" name="Screening_PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>7B702442-1F8E-D2D3-A85B-9B40F7A2717F</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA03C03F-5FCF-AF62-C82A-55A8049F7BB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B71B8267-2D9B-3674-CA72-7DDFCBC9C2E8" name="Screening_Room_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>2966BB1B-2ECE-088B-EF8A-0D95F4E923D0</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28F6A707-DCF5-8EB4-2250-CA594A9BD029"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ECBC3808-E0C6-5F28-7A26-FF1BF20B6CD3" name="Screening_Cinema_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>9D6F9FDA-5907-C36A-9263-B7F821B8E1E8</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67C88CF6-3CD1-26FB-F9D9-9493CBF54D22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9E75F53F-CC72-C6A8-0556-BE4FA26EC08E" name="Movie Director">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-12 14:48:14 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Movie_Id" id="8CFE4D0D-7B62-7E94-EDC1-A2A57689A7F6">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-12 15:49:10 UTC</createdTime>
+<generatorID>F75C8F79-9D8B-16B2-FC6F-F9312910C540</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>4F41E949-7BCD-A74B-2DCB-9100041B636E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Director_Id" id="489E4778-9364-F040-4EFB-809AFEB06933">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-12 15:54:49 UTC</createdTime>
+<generatorID>D172C87F-36A1-1CA5-3DF7-219B6D005BC8</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>55257090-571B-D19B-6E4E-9908E35FABFA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="10AABF2D-C26D-74FF-D120-C9DF8EFEF87A" name="Movie Director PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 13:02:43 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8CFE4D0D-7B62-7E94-EDC1-A2A57689A7F6</attributeRef>
+<attributeRef>489E4778-9364-F040-4EFB-809AFEB06933</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

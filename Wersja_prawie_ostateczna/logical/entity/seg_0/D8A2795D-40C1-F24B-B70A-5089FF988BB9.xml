@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8A2795D-40C1-F24B-B70A-5089FF988BB9" name="Screening">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-11 12:35:59 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Screening_Id" id="9FDF3B16-4B5D-B2F1-2D42-96E6AC9EB02F">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-11 12:36:08 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Movie_Id" id="967B7A6A-1B34-5639-D3E3-9F4CE623D9ED">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-16 20:01:57 UTC</createdTime>
+<generatorID>3853CD6D-3227-C218-7F8C-A777A7FC500B</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>4F41E949-7BCD-A74B-2DCB-9100041B636E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Room_Id" id="ACD04780-5EB7-2614-76D4-5FD9C30CD59D">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-16 20:20:28 UTC</createdTime>
+<generatorID>59DC4CB8-80D3-5FFC-AA71-6341DD2B80D7</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>DB4FD046-E37E-4C37-9113-459469D03D54</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LanguageVersion_id" id="D010379D-1E62-2D1C-A52F-9DBAF209C012">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-17 15:17:37 UTC</createdTime>
+<generatorID>27713145-8E67-4E4A-D6E0-48E5662D919E</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>11E903F5-912E-514B-D199-4A06A7B05ADC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7B702442-1F8E-D2D3-A85B-9B40F7A2717F" name="Screening PK">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-11 12:37:39 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9FDF3B16-4B5D-B2F1-2D42-96E6AC9EB02F</attributeRef>
+<attributeRef>D010379D-1E62-2D1C-A52F-9DBAF209C012</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="14D62816-6596-24D0-1D54-ADF65BE1C586" name="Movie_Actor">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>D715F96F-0A30-5C04-E9E2-AC4E8695B4F1</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Movie_Movie_Id" id="FC28E531-99F3-76E9-FCAB-E8E377C827F6">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>8D8CB725-055C-84C3-C8CB-BB1125FDB052</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AD4DE162-EB66-8A05-30B5-A7E1B8BB6167" referredColumn="4175967C-EB81-366C-81A6-1E9F9FAFF746"/>
+</associations>
+</Column>
+<Column name="Actor_Actor_Id" id="59A47E3C-109A-542B-5AE9-F91450E87449">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>698E12D0-06CA-8AAE-199B-42D67B743105</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1A508388-8071-7F03-2212-262CBC1A4E54" referredColumn="C2EDDC8F-9212-4DB9-4807-29DB0DD20D18"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="94714E94-9227-C1D5-533F-B9A61DC973E2" name="Movie_Actor_PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>E0345ED5-2FCB-7760-8E03-E84F8DF0B41A</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC28E531-99F3-76E9-FCAB-E8E377C827F6"/>
+<colUsage columnID="59A47E3C-109A-542B-5AE9-F91450E87449"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="57522200-657C-6A88-7612-31C7978E8A80" name="Movie_Actor_Movie_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>5C61BBD4-4CE0-3CAD-219C-0153BA73CE91</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC28E531-99F3-76E9-FCAB-E8E377C827F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2DB5AEF3-7CFC-01F5-CCE3-16FE277882CB" name="Movie_Actor_Actor_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>0AC09232-609F-75C0-7174-37FC4D4B7FD5</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59A47E3C-109A-542B-5AE9-F91450E87449"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

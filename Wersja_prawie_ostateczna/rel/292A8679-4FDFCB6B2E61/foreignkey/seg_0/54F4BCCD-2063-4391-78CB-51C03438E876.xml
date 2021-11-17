@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="54F4BCCD-2063-4391-78CB-51C03438E876" containerWithKeyObject="03A7B0C7-47FB-76A5-2699-1F11BAFB141A" localFKIndex="19A36B9A-DB4A-BE70-53C0-4AE029951B40" name="UserReview_Review_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>C77C20BE-F685-C5E4-87D7-E63990E106A0</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<referredTableLongName>Review</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C11456D7-CC98-E329-CA8A-03DDC6FC8A9B</referredTableID>
+<keyObject>7DD7695E-AC22-FDC1-5AE4-84165F69C02D</keyObject>
+<referredKeyID>7DD7695E-AC22-FDC1-5AE4-84165F69C02D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Review_Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

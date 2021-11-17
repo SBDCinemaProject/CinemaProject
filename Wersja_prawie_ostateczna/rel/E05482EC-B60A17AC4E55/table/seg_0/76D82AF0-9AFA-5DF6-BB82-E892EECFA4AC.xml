@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="76D82AF0-9AFA-5DF6-BB82-E892EECFA4AC" name="UserReview">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>53104309-B39A-FAD4-9273-FFC03C8E9445</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="User_User_Id" id="3F314894-AFBA-4E83-0003-22BB0018984D">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>6F971DFE-9FDC-0B33-E707-7352B48279BF</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3CFC488D-F93B-BC74-BF4D-F9BEB8AC8CC2" referredColumn="E399989C-E055-5A45-DE8E-51B8F397D5D5"/>
+</associations>
+</Column>
+<Column name="Review_Review_Id" id="12653836-EEEA-E2E9-C518-58D935F009FD">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>F2626D95-26D2-A279-D7FC-25D03A14D9F8</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1FC47C5D-0F5E-5923-D1C4-DE63BD979E8F" referredColumn="07581652-92F3-BC12-8512-720F8458FDA6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="191AC830-D3F5-62E9-B4AB-270A90145EFB" name="UserReview_PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>8D1DDCAE-D690-647E-482B-583F13D3DC51</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F314894-AFBA-4E83-0003-22BB0018984D"/>
+<colUsage columnID="12653836-EEEA-E2E9-C518-58D935F009FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA6EDD7B-A28B-1F29-2D3C-A4855A23464C" name="UserReview_User_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>F81F4814-DB79-A97A-1D30-17A584B7C6E3</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F314894-AFBA-4E83-0003-22BB0018984D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1CEE81FE-98CD-718D-84AA-4AF29B02F89F" name="UserReview_Review_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 17:10:24 UTC</createdTime>
+<generatorID>C77C20BE-F685-C5E4-87D7-E63990E106A0</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12653836-EEEA-E2E9-C518-58D935F009FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

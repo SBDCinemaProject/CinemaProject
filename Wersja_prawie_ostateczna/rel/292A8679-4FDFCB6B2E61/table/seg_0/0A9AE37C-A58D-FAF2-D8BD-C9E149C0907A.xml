@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A9AE37C-A58D-FAF2-D8BD-C9E149C0907A" name="Archive_table">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>D049C425-2B5E-F2FB-2F04-97239B219EE4</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Movie_Movie_Id" id="4EF33889-D04E-D65A-28F2-3EAC253DBBC3">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>E806DA93-D476-EB84-F214-B20DC364BDF3</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A28D940E-FB9F-987B-896D-8073BEFF2CCD" referredColumn="AEC47C8B-3BD9-B37D-2133-F34B7E5918AD"/>
+</associations>
+</Column>
+<Column name="User_User_Id" id="3C3933C0-2CD2-5F46-AD05-4B4F9843551C">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>E915CA9C-A07D-846D-78C2-99F2961339C0</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="025EDA7D-D06F-1BE3-5392-7777EF58B0B1" referredColumn="826BED43-4513-02D9-5046-9C3C871318A9"/>
+</associations>
+</Column>
+<Column name="Archive_Id" id="35CE8852-1DA2-B94E-BAF0-BD626DA581A8">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>E376F785-8BAF-29E7-6E65-DDD4134B5E65</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0CE2FC6F-F38C-504F-863E-6A9DF6872C0F" name="Archive_table_PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>E2243A6A-D9F9-CA4A-8D61-1CEEE8029417</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35CE8852-1DA2-B94E-BAF0-BD626DA581A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9179A4A8-2AE8-95DC-F759-9D14E5A3372C" name="Archive_table_Movie_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>3C4A50F8-7B07-9CE5-E858-E668E54EB8F1</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EF33889-D04E-D65A-28F2-3EAC253DBBC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="518AD195-90C3-28EA-EFA0-52F59E828521" name="Archive_table_User_FK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-14 11:49:53 UTC</createdTime>
+<generatorID>BCCD0792-A26B-42DC-76CF-6CB505291146</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C3933C0-2CD2-5F46-AD05-4B4F9843551C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

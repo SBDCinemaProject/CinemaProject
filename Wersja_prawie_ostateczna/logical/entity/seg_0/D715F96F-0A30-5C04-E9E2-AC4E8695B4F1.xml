@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D715F96F-0A30-5C04-E9E2-AC4E8695B4F1" name="Movie Actor">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-12 14:48:33 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Movie_Id" id="8D8CB725-055C-84C3-C8CB-BB1125FDB052">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-12 15:49:02 UTC</createdTime>
+<generatorID>5C61BBD4-4CE0-3CAD-219C-0153BA73CE91</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>4F41E949-7BCD-A74B-2DCB-9100041B636E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Actor_Id" id="698E12D0-06CA-8AAE-199B-42D67B743105">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-12 15:51:24 UTC</createdTime>
+<generatorID>0AC09232-609F-75C0-7174-37FC4D4B7FD5</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>16E5BABC-D209-7978-AA1E-460503F27A3D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E0345ED5-2FCB-7760-8E03-E84F8DF0B41A" name="Movie Actor PK">
+<createdBy>micha</createdBy>
+<createdTime>2021-11-13 13:02:06 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8D8CB725-055C-84C3-C8CB-BB1125FDB052</attributeRef>
+<attributeRef>698E12D0-06CA-8AAE-199B-42D67B743105</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
