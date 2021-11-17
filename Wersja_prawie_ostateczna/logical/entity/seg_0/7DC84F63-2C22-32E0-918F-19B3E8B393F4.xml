@@ -46,19 +46,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Price" id="43966F4A-7676-2B54-54B6-7FE1D0C40F8C">
-<createdBy>micha</createdBy>
-<createdTime>2021-11-13 15:35:30 UTC</createdTime>
-<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
-<engineerTo>
-<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
-<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT021</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Date" id="54CE4C14-ACAF-1285-DE39-108F57038EF0">
 <createdBy>micha</createdBy>
 <createdTime>2021-11-13 15:35:30 UTC</createdTime>
@@ -70,21 +57,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="LanguageVersion_id" id="446D5B0D-3EB7-58C1-3C5F-9D9E7D29A160">
-<createdBy>micha</createdBy>
-<createdTime>2021-11-17 15:17:37 UTC</createdTime>
-<generatorID>90EC5B5C-9F1E-C702-31CF-A2C4C882383B</generatorID>
-<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
-<engineerTo>
-<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
-<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
-</engineerTo>
-<referedAttribute>D010379D-1E62-2D1C-A52F-9DBAF209C012</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

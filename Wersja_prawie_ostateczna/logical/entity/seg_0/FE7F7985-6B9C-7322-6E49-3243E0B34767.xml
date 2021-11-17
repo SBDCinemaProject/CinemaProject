@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E7750047-7FFE-C256-ED36-17EFFCB40927" name="DirectorAward">
-<createdBy>micha</createdBy>
-<createdTime>2021-11-16 19:49:36 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FE7F7985-6B9C-7322-6E49-3243E0B34767" name="Article">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:33:39 UTC</createdTime>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
 <engineerTo>
 <item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
@@ -16,39 +16,37 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Director_Id" id="99D462FA-42FD-9C11-F167-3F8C2EBB0811">
+<Attribute name="Article_Id" id="E8354494-E412-873E-CF42-D3C70D74D165">
 <createdBy>Kosiarz</createdBy>
-<createdTime>2021-11-17 17:12:24 UTC</createdTime>
-<generatorID>7D85ABAD-7FD4-FE0E-85B5-9F9471BF102B</generatorID>
+<createdTime>2021-11-17 17:33:46 UTC</createdTime>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
 <engineerTo>
 <item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
 <item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
 </engineerTo>
-<referedAttribute>55257090-571B-D19B-6E4E-9908E35FABFA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Award_Id" id="E874F609-5DC8-61E5-B981-CC397D046156">
+<Attribute name="Content" id="AE30464B-438E-C08D-6F70-B5BBCB7647F0">
 <createdBy>Kosiarz</createdBy>
-<createdTime>2021-11-17 17:12:29 UTC</createdTime>
-<generatorID>7FD5724B-C90E-917A-9F5F-17AD7C243C10</generatorID>
+<createdTime>2021-11-17 17:34:01 UTC</createdTime>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
 <engineerTo>
 <item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
 <item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
 </engineerTo>
-<referedAttribute>25AB5A39-8AC0-7FA4-6548-F0BCA0ED0C61</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Date" id="78A2577C-77AE-46C0-94F9-B7F1668B8DB3">
+<Attribute name="Date" id="B6AB46F6-F5DA-7700-CCBB-613CC555561C">
 <createdBy>Kosiarz</createdBy>
-<createdTime>2021-11-17 17:45:09 UTC</createdTime>
+<createdTime>2021-11-17 17:34:29 UTC</createdTime>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
 <engineerTo>
 <item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
@@ -60,11 +58,26 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Worker_Id" id="5BA4A8E2-CA89-478C-184B-E8A781524A05">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:34:50 UTC</createdTime>
+<generatorID>96C5A4E3-6285-B424-6CB7-4043B275FD37</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>4C8293B6-53E0-E9B5-2BC7-DD78F0130C33</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="4A51EEE0-BD70-AE9C-DCB4-A0DCE136EAAB" name="DirectorAwards PK">
+<identifier id="DD2B9CF0-D5BB-700A-4033-2281B759CC19" name="Article PK">
 <createdBy>Kosiarz</createdBy>
-<createdTime>2021-11-17 17:12:24 UTC</createdTime>
+<createdTime>2021-11-17 17:33:58 UTC</createdTime>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
 <engineerTo>
 <item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
@@ -72,8 +85,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>99D462FA-42FD-9C11-F167-3F8C2EBB0811</attributeRef>
-<attributeRef>E874F609-5DC8-61E5-B981-CC397D046156</attributeRef>
+<attributeRef>E8354494-E412-873E-CF42-D3C70D74D165</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

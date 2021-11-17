@@ -86,6 +86,21 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="User_Id" id="0760ED34-4640-1E96-982B-071FE90C4B44">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:46:28 UTC</createdTime>
+<generatorID>DBC95DB2-6794-E684-0C01-C825ACBDC799</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>A901F7F6-FE8A-6AEC-2AB0-BE45E35F10B1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="CD0B2E08-DEA1-9B9E-70C9-28DC999A004A" name="Review PK">

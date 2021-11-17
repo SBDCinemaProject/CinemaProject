@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ABB151C5-3C6F-1A50-BE9D-F8BBCCF51CA8" name="ActorAwards">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ABB151C5-3C6F-1A50-BE9D-F8BBCCF51CA8" name="ActorAward">
 <createdBy>micha</createdBy>
 <createdTime>2021-11-16 19:49:09 UTC</createdTime>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
@@ -16,23 +16,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Number" id="38099611-6E22-C580-2AD0-F75B44045C90">
-<createdBy>micha</createdBy>
-<createdTime>2021-11-16 19:58:37 UTC</createdTime>
-<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
-<engineerTo>
-<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
-<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Actor_Id" id="8778AE94-4AE5-D6D8-1794-2C472AE46D83">
-<createdBy>micha</createdBy>
-<createdTime>2021-11-16 20:06:56 UTC</createdTime>
-<generatorID>D762CDE9-E1A9-5656-61A9-63258A72A0DB</generatorID>
+<Attribute name="Actor_Id" id="9C191F27-C25E-BFB1-B96E-D7AA310A9D84">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:10:00 UTC</createdTime>
+<generatorID>677A25E5-1E49-A6B0-EEB6-01E996969CE8</generatorID>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
 <engineerTo>
 <item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
@@ -44,5 +31,51 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Award_Id" id="9892ECD4-50FE-989A-52F9-F651B3BB7635">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:12:08 UTC</createdTime>
+<generatorID>571354D7-D826-1988-8036-EC0CEFBB6C13</generatorID>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<referedAttribute>25AB5A39-8AC0-7FA4-6548-F0BCA0ED0C61</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Date" id="6C29821E-BED4-0922-22D6-31EFE93BC75C">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:44:47 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A5C7A849-0D92-F050-551D-8B5FA4D28FFB" name="ActorAward PK">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:10:28 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9C191F27-C25E-BFB1-B96E-D7AA310A9D84</attributeRef>
+<attributeRef>9C191F27-C25E-BFB1-B96E-D7AA310A9D84</attributeRef>
+<attributeRef>9892ECD4-50FE-989A-52F9-F651B3BB7635</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

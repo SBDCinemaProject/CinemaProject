@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D049C425-2B5E-F2FB-2F04-97239B219EE4" name="Archive_table">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D049C425-2B5E-F2FB-2F04-97239B219EE4" name="Archive">
 <createdBy>Kosiarz</createdBy>
 <createdTime>2021-11-11 12:38:44 UTC</createdTime>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
@@ -16,21 +16,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Movie_Id" id="E806DA93-D476-EB84-F214-B20DC364BDF3">
-<createdBy>micha</createdBy>
-<createdTime>2021-11-12 16:01:23 UTC</createdTime>
-<generatorID>3C4A50F8-7B07-9CE5-E858-E668E54EB8F1</generatorID>
-<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
-<engineerTo>
-<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
-<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
-</engineerTo>
-<referedAttribute>4F41E949-7BCD-A74B-2DCB-9100041B636E</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="User_Id" id="E915CA9C-A07D-846D-78C2-99F2961339C0">
 <createdBy>micha</createdBy>
 <createdTime>2021-11-12 16:01:40 UTC</createdTime>
@@ -46,17 +31,33 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Archive_Id" id="E376F785-8BAF-29E7-6E65-DDD4134B5E65">
-<createdBy>micha</createdBy>
-<createdTime>2021-11-12 17:03:49 UTC</createdTime>
+<Attribute name="Screening_Id" id="734ADFDF-5D14-949A-3B57-C02964317BEC">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:22:09 UTC</createdTime>
+<generatorID>6223FEEF-4FF5-5A5A-8E6F-31B890ECE3B7</generatorID>
 <ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
 <engineerTo>
 <item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
 <item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
 </engineerTo>
+<referedAttribute>9FDF3B16-4B5D-B2F1-2D42-96E6AC9EB02F</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Date" id="89465785-06E6-3337-F5EA-7A42860EFC24">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:44:06 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -71,7 +72,8 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>E376F785-8BAF-29E7-6E65-DDD4134B5E65</attributeRef>
+<attributeRef>E915CA9C-A07D-846D-78C2-99F2961339C0</attributeRef>
+<attributeRef>734ADFDF-5D14-949A-3B57-C02964317BEC</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -74,6 +74,20 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Price" id="0069107D-6D1B-5947-47D8-E0E58C4348EF">
+<createdBy>Kosiarz</createdBy>
+<createdTime>2021-11-17 17:16:02 UTC</createdTime>
+<ownerDesignName>Wersja_prawie_ostateczna</ownerDesignName>
+<engineerTo>
+<item key="292A8679-E8F6-786C-F188-4FDFCB6B2E61" value="true"/>
+<item key="E05482EC-8E82-75E9-05D5-B60A17AC4E55" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7B702442-1F8E-D2D3-A85B-9B40F7A2717F" name="Screening PK">
@@ -87,7 +101,6 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>9FDF3B16-4B5D-B2F1-2D42-96E6AC9EB02F</attributeRef>
-<attributeRef>D010379D-1E62-2D1C-A52F-9DBAF209C012</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
