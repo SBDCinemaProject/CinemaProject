@@ -1,0 +1,37 @@
+﻿@page
+@model CinemaProject.Pages.ActorAwards.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Actoraward</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Actoraward.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Actoraward.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Actoraward.ActorActor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Actoraward.ActorActor.Firstname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Actoraward.AwardAward)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Actoraward.AwardAward.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-page="./Index">Back to List</a>
+</div>

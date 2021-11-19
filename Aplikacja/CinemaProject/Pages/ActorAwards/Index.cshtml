@@ -1,0 +1,48 @@
+﻿@page
+@model CinemaProject.Pages.ActorAwards.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Actoraward[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actoraward[0].ActorActor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actoraward[0].AwardAward)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Actoraward) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActorActor.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AwardAward.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
