@@ -1,0 +1,42 @@
+﻿@page
+@model CinemaProject.Pages.LanguageVersions.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Languageversion[0].Language)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Languageversion[0].Type)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Languageversion) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Language)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.LvId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.LvId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.LvId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

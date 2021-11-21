@@ -1,0 +1,37 @@
+﻿@page
+@model CinemaProject.Pages.MovieActors.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Movieactor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movieactor.Role)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movieactor.Role)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movieactor.ActorActor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movieactor.ActorActor.Firstname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movieactor.MovieMovie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movieactor.MovieMovie.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-page="./Index">Back to List</a>
+</div>

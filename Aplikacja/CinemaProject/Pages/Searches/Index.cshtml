@@ -1,0 +1,48 @@
+﻿@page
+@model CinemaProject.Pages.Searches.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Search[0].Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Search[0].Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Search[0].UserUser)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Search) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserUser.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.SearchId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.SearchId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SearchId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

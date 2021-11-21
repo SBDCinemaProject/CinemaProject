@@ -1,0 +1,82 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using CinemaProject.Models;
+
+namespace CinemaProject.Pages.Screenings
+{
+    public class EditModel : PageModel
+    {
+        private readonly CinemaProject.Models.ModelContext _context;
+
+        public EditModel(CinemaProject.Models.ModelContext context)
+        {
+            _context = context;
+        }
+
+        [BindProperty]
+        public Screening Screening { get; set; }
+
+        public async Task<IActionResult> OnGetAsync(decimal? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Screening = await _context.Screenings
+                .Include(s => s.LanguageversionLv)
+                .Include(s => s.MovieMovie)
+                .Include(s => s.RoomRoom).FirstOrDefaultAsync(m => m.ScreeningId == id);
+
+            if (Screening == null)
+            {
+                return NotFound();
+            }
+           ViewData["LanguageversionLvId"] = new SelectList(_context.Languageversions, "LvId", "Language");
+           ViewData["MovieMovieId"] = new SelectList(_context.Movies, "MovieId", "Name");
+           ViewData["RoomRoomId"] = new SelectList(_context.Rooms, "RoomId", "IsAvalible");
+            return Page();
+        }
+
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://aka.ms/RazorPagesCRUD.
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _context.Attach(Screening).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ScreeningExists(Screening.ScreeningId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return RedirectToPage("./Index");
+        }
+
+        private bool ScreeningExists(decimal id)
+        {
+            return _context.Screenings.Any(e => e.ScreeningId == id);
+        }
+    }
+}

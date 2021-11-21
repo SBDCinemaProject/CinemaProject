@@ -1,0 +1,41 @@
+﻿@page
+@model CinemaProject.Pages.MovieActors.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Movieactor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movieactor.Role)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movieactor.Role)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movieactor.ActorActor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movieactor.ActorActor.Firstname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movieactor.MovieMovie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movieactor.MovieMovie.Name)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Movieactor.MovieMovieId" />
+        <input type="hidden" asp-for="Movieactor.ActorActorId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
