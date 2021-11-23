@@ -26,7 +26,7 @@
                 @Html.DisplayNameFor(model => model.Review[0].MovieMovie)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Review[0].UserUser)
+                @Html.DisplayNameFor(model => model.Review[0].UserUser.Username)
             </th>
             <th></th>
         </tr>
@@ -47,7 +47,7 @@
                 @Html.DisplayFor(modelItem => item.MovieMovie.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UserUser.Email)
+                @Html.DisplayFor(modelItem => item.UserUser.Username)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ReviewId">Edit</a> |

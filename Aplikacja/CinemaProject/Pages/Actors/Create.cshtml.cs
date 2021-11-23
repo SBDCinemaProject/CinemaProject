@@ -30,6 +30,15 @@ namespace CinemaProject.Pages.Actors
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if(_context.Actors.Count() != 0)
+            {
+                decimal id = _context.Actors
+                .Select(x => x.ActorId)
+                .Max();
+                Actor.ActorId = id + 1;
+            }              
+
             if (!ModelState.IsValid)
             {
                 return Page();

@@ -29,7 +29,7 @@
                 @Html.DisplayNameFor(model => model.Worker[0].Password)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Worker[0].CinemaCinema)
+                @Html.DisplayNameFor(model => model.Worker[0].CinemaCinema.Name)
             </th>
             <th></th>
         </tr>
@@ -50,10 +50,7 @@
                 @Html.DisplayFor(modelItem => item.Position)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CinemaCinema.City)
+                @Html.DisplayFor(modelItem => item.CinemaCinema.Name)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.WorkerId">Edit</a> |

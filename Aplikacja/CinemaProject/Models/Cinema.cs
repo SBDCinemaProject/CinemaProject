@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -12,9 +13,12 @@ namespace CinemaProject.Models
             Rooms = new HashSet<Room>();
             Workers = new HashSet<Worker>();
         }
-
+        [Required]
         public decimal CinemaId { get; set; }
+        [Required]
         public string City { get; set; }
+        [Required]
+        [Display(Name = "Cinema Name")]
         public string Name { get; set; }
 
         public virtual ICollection<Room> Rooms { get; set; }

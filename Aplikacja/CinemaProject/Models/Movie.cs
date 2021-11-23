@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -14,11 +15,14 @@ namespace CinemaProject.Models
             Reviews = new HashSet<Review>();
             Screenings = new HashSet<Screening>();
         }
-
+        [Required]
         public decimal MovieId { get; set; }
+        [Required]
         public string Name { get; set; }
         public string Description { get; set; }
+        [Required]
         public DateTime Productionyear { get; set; }
+        [Required]
         public decimal GenreGenreId { get; set; }
         public string Country { get; set; }
 

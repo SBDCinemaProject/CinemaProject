@@ -24,10 +24,10 @@
             @Html.DisplayFor(model => model.Article.Date)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Article.WorkerWorker)
+            @Html.DisplayNameFor(model => model.Article.WorkerWorker.Name)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Article.WorkerWorker.Name)
+            @Html.DisplayFor(model => model.Article.WorkerWorker.Name) @Html.DisplayFor(model => model.Article.WorkerWorker.Surname)
         </dd>
     </dl>
 </div>

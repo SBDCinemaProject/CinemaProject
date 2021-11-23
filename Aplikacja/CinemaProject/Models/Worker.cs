@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -11,13 +12,20 @@ namespace CinemaProject.Models
         {
             Articles = new HashSet<Article>();
         }
-
+        [Required]
         public decimal CinemaCinemaId { get; set; }
+        [Required]
         public decimal WorkerId { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Surname { get; set; }
+        [Required]
         public int Salary { get; set; }
+        [Required]
         public string Position { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         public virtual Cinema CinemaCinema { get; set; }

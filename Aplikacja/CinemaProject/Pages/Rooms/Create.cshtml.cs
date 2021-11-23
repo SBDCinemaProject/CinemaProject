@@ -35,6 +35,10 @@ namespace CinemaProject.Pages.Rooms
             {
                 return Page();
             }
+            if (Room.IsAvalible == "true")
+                Room.IsAvalible = "1";
+            else if (Room.IsAvalible == "false")
+                Room.IsAvalible = "0";
 
             _context.Rooms.Add(Room);
             await _context.SaveChangesAsync();
