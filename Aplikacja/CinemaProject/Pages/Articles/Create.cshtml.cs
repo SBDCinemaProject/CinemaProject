@@ -31,6 +31,7 @@ namespace CinemaProject.Pages.Articles
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            Article.Date = DateTime.Now;
             if (!ModelState.IsValid)
             {
                 return Page();

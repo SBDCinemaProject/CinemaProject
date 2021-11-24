@@ -10,8 +10,10 @@ namespace CinemaProject.Models
     {
         [Required]
         public decimal ReviewId { get; set; }
+        [MaxLength(1000)]
         public string Content { get; set; }
         [Required]
+        [Range(0,10, ErrorMessage = "Rating must be a number from 0 to 10")]
         public byte Rating { get; set; }
         [Required]
         public decimal MovieMovieId { get; set; }

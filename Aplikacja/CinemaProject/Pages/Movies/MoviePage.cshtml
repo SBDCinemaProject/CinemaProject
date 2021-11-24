@@ -1,0 +1,130 @@
+﻿@page
+@model CinemaProject.Pages.Movies.MoviePageModel
+@{
+}
+<div>
+    <h2>@Model.Movie.Name</h2>
+    <h5 style="color:gray">@Model.Movie.Productionyear</h5>
+    <div class="row">
+        <div class="col-sm-8">
+            <h5> <a asp-page="../Genres/Details" asp-route-id="@Model.Movie.GenreGenre.GenreId">@Model.Movie.GenreGenre.Name</a></h5>
+        </div>
+        <div class="col-sm-4">
+            <h5 class="float-right">Raiting: @ViewData["raiting"] / 10</h5>
+        </div>
+    </div>  
+    <hr />
+    <h4>@Html.DisplayNameFor(m => m.Movie.Description)</h4>
+    <hr />
+    <p>
+        @Html.DisplayFor(m => m.Movie.Description)
+    </p>
+    <h4>Directors</h4>
+    <hr />
+    @if (Model.Movie.Moviedirectors.Count() != 0)
+    {
+        foreach (var director in Model.Movie.Moviedirectors)
+        {
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@director.DirectorDirector.Firstname @director.DirectorDirector.Lastname</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@director.DirectorDirector.Birthday.Value.ToString("d")</h6>
+                    <a href="#" class="card-link">see director's page</a>
+                </div>
+            </div>
+        }
+        @if (Model.Movie.Moviedirectors.Count() == 4)
+        {
+            <a href="#">see more</a>
+        }
+    }
+    else
+    {
+        <h6>Currently there's no information about directors of this movie</h6>
+    }
+    <h4 class="m-1">Actors</h4>
+    <hr />
+    @if (Model.Movie.Movieactors.Count() != 0)
+    {
+        <div class="card-deck">
+            @foreach (var actor in Model.Movie.Movieactors)
+            {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@actor.ActorActor.Firstname @actor.ActorActor.Lastname</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@actor.ActorActor.Birthday.Value.ToString("d")</h6>
+                        <p class="card-text">Played Role: @actor.Role</p>
+                        <a href="#" class="card-link">see actor's page</a>
+                    </div>
+                </div>
+            }
+        </div>
+        @if (Model.Movie.Movieactors.Count() == 4)
+        {
+            <a href="#">see more</a>
+        }
+    }
+    else
+    {
+        <h6>Currently there's no information about actors of this movie</h6>
+    }
+    <h4 class="m-1">Available Screenings</h4>
+    <hr />
+    @if (Model.Movie.Screenings.Count() != 0)
+    {
+        <div class="card-deck">
+            @foreach (var screening in Model.Movie.Screenings)
+            {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@screening.RoomRoom.CinemaCinema.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Cost: @screening.Price</h6>
+                        <a asp-page="../Screenings/ScreeningPage" asp-route-id="@screening.ScreeningId" class="card-link">see screening's details</a>
+                    </div>
+                </div>
+            }
+        </div>
+        @if (Model.Movie.Screenings.Count() == 4)
+        {
+            <a href="#">see more</a>
+        }
+    }
+    else
+    {
+        <h6>Currently there's no screenings of this movie</h6>
+    }
+    <h4 class="m-1">Reviews</h4>
+    <hr />
+    @if (Model.Movie.Reviews.Count() != 0)
+    {
+        <div class="col-sm-12 p-0">
+            @foreach (var review in Model.Movie.Reviews)
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@review.UserUser.Username</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Score: @review.Rating / 10</h6>
+                        @{
+                            string content = review.Content;
+                            if (review.Content.Length > 310)
+                            {
+                                content = review.Content.Substring(0, 307);
+                                content += "...";
+                            }
+                            <p class="card-text">@content</p>
+                        }
+                         <a asp-page="../Reviews/Details" asp-route-id="@review.ReviewId" class="card-link">see full review</a>
+                    </div>
+                </div>
+            }
+            @if (Model.Movie.Reviews.Count() == 4)
+            {
+                <a href="#">see more</a>
+            }
+        </div>
+    }
+    else
+    {
+        <h6>Currently there's no reviews of this movie</h6>
+    }
+</div>

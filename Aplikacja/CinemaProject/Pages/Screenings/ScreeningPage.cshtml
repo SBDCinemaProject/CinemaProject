@@ -1,0 +1,67 @@
+﻿@page
+@model CinemaProject.Pages.Screenings.ScreeningPageModel
+@{
+}
+<div>
+    <div class="row">
+        <div class="col-sm-8">
+            <h2>@Model.Screening.MovieMovie.Name</h2>
+            <h5 style="color:gray">@Model.Screening.MovieMovie.Productionyear</h5>
+            <h5> <a asp-page="../Genres/Details" asp-route-id="@Model.Screening.MovieMovie.GenreGenre.GenreId">@Model.Screening.MovieMovie.GenreGenre.Name</a></h5>
+        </div>
+        <div class="col-sm-4">
+            <button class="btn btn-info float-right ">
+                Buy Ticket
+            </button>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-4">
+            <h5>Room: @Model.Screening.RoomRoom.Name</h5>
+        </div>
+        <div class="col-sm-4">
+            <h5>Cinema: @Model.Screening.RoomRoom.CinemaCinema.Name</h5>
+        </div>
+        <div class="col-sm-4">
+            <h5>@Html.DisplayNameFor(m => m.Screening.RoomRoom.CinemaCinema.City): @Model.Screening.RoomRoom.CinemaCinema.City</h5>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-4">
+            <h5>Language: @Model.Screening.LanguageversionLv.Language</h5>
+        </div>
+        <div class="col-sm-4">
+            <h5>@Html.DisplayNameFor(m => m.Screening.LanguageversionLv.Type): @Model.Screening.LanguageversionLv.Type</h5>
+        </div>
+        <div class="col-sm-4">
+            <h5>@Html.DisplayNameFor(m => m.Screening.Price): @Model.Screening.Price</h5>
+        </div>
+    </div>
+    @if (Model.ScreeningDifferentLanguageVersions.Count() > 0)
+    {
+        <h6>See another language versions: </h6>
+        <div class="card-deck">
+            @foreach (var screening in Model.ScreeningDifferentLanguageVersions)
+            {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@screening.LanguageversionLv.Language</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@screening.LanguageversionLv.Type</h6>
+                        <a asp-page="./ScreeningPage" asp-route-id="@screening.ScreeningId" class="card-link">see screening</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    <hr />
+    <h4>@Html.DisplayNameFor(m => m.Screening.MovieMovie.Description)</h4>
+    <hr />
+    <p>
+        @Html.DisplayFor(m => m.Screening.MovieMovie.Description)
+    </p>
+    <a asp-page="../Movies/MoviePage" asp-route-id="@Model.Screening.MovieMovie.MovieId">see full movie page</a>
+</div>

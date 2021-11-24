@@ -16,7 +16,7 @@
             <input type="hidden" asp-for="Review.ReviewId" />
             <div class="form-group">
                 <label asp-for="Review.Content" class="control-label"></label>
-                <input asp-for="Review.Content" class="form-control" />
+                <textarea asp-for="Review.Content" class="form-control" rows="6" ></textarea>
                 <span asp-validation-for="Review.Content" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -35,9 +35,7 @@
                 <span asp-validation-for="Review.UserUserId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Review.Creationdate" class="control-label"></label>
-                <input asp-for="Review.Creationdate" class="form-control" />
-                <span asp-validation-for="Review.Creationdate" class="text-danger"></span>
+                <input asp-for="Review.Creationdate" type="hidden" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

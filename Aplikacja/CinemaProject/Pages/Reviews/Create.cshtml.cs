@@ -32,6 +32,7 @@ namespace CinemaProject.Pages.Reviews
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            Review.Creationdate = DateTime.Now;
             if (!ModelState.IsValid)
             {
                 return Page();
