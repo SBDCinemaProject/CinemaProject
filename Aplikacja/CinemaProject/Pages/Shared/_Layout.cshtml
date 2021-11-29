@@ -16,8 +16,8 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse row ml-2">
+                    <ul class="navbar-nav col-sm-2">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
@@ -25,6 +25,19 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
+                    @{string search = "";}
+                    <form class="ml-3 form-inline col-sm-6">
+                        <input class="form-control mr-sm-1" type="search" placeholder="Search..." asp-for="@search" aria-label="Search">
+                        <select name="selectedValue" class="form-control mr-sm-1">
+                            <option value="movie" selected>Movie</option>
+                            <option value="screening">Screening</option>
+                            <option value="actor">Actor</option>
+                            <option value="director">Director</option>
+                        </select>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" asp-route-search="@search" asp-page="/SearchPage">Search</button>
+                    </form>
+                    <div>
+                    </div>
                 </div>
             </div>
         </nav>

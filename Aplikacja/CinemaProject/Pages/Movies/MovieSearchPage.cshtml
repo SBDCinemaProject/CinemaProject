@@ -1,0 +1,61 @@
+﻿@page
+@model CinemaProject.Pages.Movies.MovieSearchPageModel
+@{
+}
+<h3>Results of a search: </h3>
+
+@if (Model.Movies.Count != 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movies[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movies[0].Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movies[0].Productionyear)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movies[0].Country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movies[0].GenreGenre.Name)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Movies)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Productionyear)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GenreGenre.Name)
+                    </td>
+                    <td>
+                        <a asp-page="./MoviePage" asp-route-id="@item.MovieId">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h5>Nothing has been found</h5>
+}
+

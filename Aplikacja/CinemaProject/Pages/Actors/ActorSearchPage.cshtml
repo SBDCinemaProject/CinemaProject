@@ -1,0 +1,55 @@
+﻿@page
+@model CinemaProject.Pages.Actors.ActorSearchPageModel
+@{
+}
+<h3>Results of the search:</h3>
+
+@if (Model.Actors.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Actors[0].Firstname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Actors[0].Lastname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Actors[0].Birthday)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Actors[0].Nationality)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Actors)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Firstname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Lastname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Birthday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nationality)
+                    </td>
+                    <td>
+                        <a asp-page="./Details" asp-route-id="@item.ActorId">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+   <h5>Nothing has been found</h5>
+}
+

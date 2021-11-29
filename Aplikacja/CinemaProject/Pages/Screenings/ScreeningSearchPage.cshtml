@@ -1,0 +1,54 @@
+﻿@page
+@model CinemaProject.Pages.Screenings.ScreeningSearchPageModel
+@{
+}
+<h3>Results of a search: </h3>
+
+@if (Model.Screenings.Count != 0)
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Screenings[0].MovieMovie.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Screenings[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Screenings[0].LanguageversionLv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Screenings[0].RoomRoom)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Screenings)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieMovie.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LanguageversionLv.Language)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomRoom.Name)
+            </td>
+            <td>
+                <a asp-page="./ScreeningPage" asp-route-id="@item.ScreeningId">Details</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
+else
+{
+    <h5>Nothing has been found</h5>
+}
