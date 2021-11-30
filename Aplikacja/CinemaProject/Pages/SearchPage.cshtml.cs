@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using CinemaProject.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,29 @@ namespace CinemaProject.Pages
             if (selectedValue == null)
             {
                 return NotFound();
+            }
+            if(User.Identity.IsAuthenticated)
+            {
+                //get id of current user by checking his claim
+                decimal userId = decimal.Parse(User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier)
+                   .Select(c => c.Value).SingleOrDefault());
+                Search searchDatabase = new Search()
+                {
+                    Content = search,
+                    Category = selectedValue,
+                    UserUserId = userId,
+                };
+                //Find last id
+                if (_context.Searches.Count() != 0)
+                {
+                    decimal id = _context.Searches
+                    .Select(x => x.SearchId)
+                    .Max();
+                    searchDatabase.SearchId = id + 1;
+                    
+                }
+                _context.Add(searchDatabase);
+                _context.SaveChanges();
             }
             switch (selectedValue)
             {

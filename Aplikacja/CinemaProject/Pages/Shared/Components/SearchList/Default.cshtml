@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using CinemaProject.Models
+@model List<Search>
+<h3>Search History</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].UserUser.Username)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserUser.Username)
+                </td>
+                <td>
+                    <a asp-page="/Searches/Details" asp-route-id="@item.SearchId">Details</a> |
+                    <a asp-page="/Searches/Delete" asp-route-id="@item.SearchId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

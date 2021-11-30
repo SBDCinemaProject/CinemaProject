@@ -30,9 +30,25 @@ namespace CinemaProject.Pages.Users
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            bool isUsernameAlreadyTaken = _context.Users.Any(x => x.Username == ThisUser.Username);
+
+            if(isUsernameAlreadyTaken)
+            {
+                ModelState.AddModelError("username", "Username is already taken");
+            }
+                                          
             if (!ModelState.IsValid)
             {
                 return Page();
+            }
+
+            //Find last id
+            if (_context.Users.Count() != 0)
+            {
+                decimal id = _context.Users
+                .Select(x => x.UserId)
+                .Max();
+                ThisUser.UserId = id + 1;
             }
 
             _context.Users.Add(ThisUser);

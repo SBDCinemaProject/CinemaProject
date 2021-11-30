@@ -36,6 +36,17 @@
                         </select>
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" asp-route-search="@search" asp-page="/SearchPage">Search</button>
                     </form>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="col-auto nav-link text-dark" style="margin-left: auto" asp-page="/UserAccountIndex">My Profile</a>
+                        <a class="col-auto nav-link text-dark" asp-page="/Logout">Sign out</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link text-dark" style="margin-left: auto" asp-page="/Users/Create">Register</a>
+                        <a class="nav-link text-dark" asp-page="/Login">Sign in</a>
+                    }
+
                     <div>
                     </div>
                 </div>

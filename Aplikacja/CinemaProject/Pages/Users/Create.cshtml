@@ -14,14 +14,10 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ThisUser.UserId" class="control-label"></label>
-                <input asp-for="ThisUser.UserId" class="form-control" />
-                <span asp-validation-for="ThisUser.UserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="ThisUser.Username" class="control-label"></label>
                 <input asp-for="ThisUser.Username" class="form-control" />
                 <span asp-validation-for="ThisUser.Username" class="text-danger"></span>
+                @Html.ValidationMessage("username", new { @class = "text-danger" })
             </div>
             <div class="form-group">
                 <label asp-for="ThisUser.Firstname" class="control-label"></label>
