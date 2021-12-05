@@ -32,6 +32,14 @@ namespace CinemaProject.Pages.Articles
         public async Task<IActionResult> OnPostAsync()
         {
             Article.Date = DateTime.Now;
+            //Find last id
+            if (_context.Articles.Count() != 0)
+            {
+                decimal id = _context.Articles
+                .Select(x => x.ArticleId)
+                .Max();
+                Article.ArticleId = id + 1;
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

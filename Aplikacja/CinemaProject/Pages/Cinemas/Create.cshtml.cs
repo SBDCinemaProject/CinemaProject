@@ -30,6 +30,15 @@ namespace CinemaProject.Pages.Cinemas
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Cinemas.Count() != 0)
+            {
+                decimal id = _context.Cinemas
+                .Select(x => x.CinemaId)
+                .Max();
+                Cinema.CinemaId = id + 1;
+            }
+
             if (!ModelState.IsValid)
             {
                 return Page();

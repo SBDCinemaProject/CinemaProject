@@ -30,6 +30,14 @@ namespace CinemaProject.Pages.LanguageVersions
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Languageversions.Count() != 0)
+            {
+                decimal id = _context.Languageversions
+                .Select(x => x.LvId)
+                .Max();
+                Languageversion.LvId = id + 1;
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

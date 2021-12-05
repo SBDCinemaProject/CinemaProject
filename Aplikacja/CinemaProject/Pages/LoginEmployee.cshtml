@@ -1,0 +1,30 @@
+﻿@page
+@model CinemaProject.Pages.LoginEmployeeModel
+@{
+    ViewData["Title"] = "Log In Employee";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <h4>Use an employee account to log in.</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Worker.Surname"></label>
+                    <input asp-for="Surname" class="form-control" />
+                    <span asp-validation-for="Worker.Surname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Worker.Password"></label>
+                    <input type="password" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Worker.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

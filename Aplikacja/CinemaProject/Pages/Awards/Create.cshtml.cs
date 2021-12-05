@@ -30,6 +30,14 @@ namespace CinemaProject.Pages.Awards
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Awards.Count() != 0)
+            {
+                decimal id = _context.Awards
+                .Select(x => x.AwardId)
+                .Max();
+                Award.AwardId = id + 1;
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

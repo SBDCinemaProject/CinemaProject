@@ -1,0 +1,33 @@
+﻿@page
+@model CinemaProject.Pages.Reviews.ReviewsOfMovieModel
+
+@{
+    ViewData["Title"] = "ReviewsOfMovie";
+}
+
+<h1>ReviewsOfMovie</h1>
+
+@if (Model.Reviews.Count() != 0)
+{
+    <div class="col-sm-12 p-0">
+        @foreach (var review in Model.Reviews)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@review.UserUser.Username</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Score: @review.Rating / 10</h6>
+                    @{
+                        string content = review.Content;
+                        if (review.Content.Length > 310)
+                        {
+                            content = review.Content.Substring(0, 307);
+                            content += "...";
+                        }
+                        <p class="card-text">@content</p>
+                    }
+                    <a asp-page="Details" asp-route-id="@review.ReviewId" class="card-link">see full review</a>
+                </div>
+            </div>
+        }
+    </div>
+}

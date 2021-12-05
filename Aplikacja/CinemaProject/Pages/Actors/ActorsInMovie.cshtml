@@ -1,0 +1,49 @@
+﻿@page
+@model CinemaProject.Pages.Actors.ActorsInMovieModel
+
+@{
+    ViewData["Title"] = "ActorsInMovie";
+}
+
+<h1>ActorsInMovie</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieActors[0].ActorActor.Firstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieActors[0].ActorActor.Lastname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieActors[0].ActorActor.Birthday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieActors[0].ActorActor.Nationality)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MovieActors) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActorActor.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActorActor.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActorActor.Birthday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActorActor.Nationality)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.ActorActor.ActorId">Details</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

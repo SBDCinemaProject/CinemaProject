@@ -61,7 +61,7 @@
         </div>
         @if (Model.Movie.Movieactors.Count() == 4)
         {
-            <a href="#">see more</a>
+            <a asp-page="../Actors/ActorsInMovie" asp-route-id="@Model.Movie.MovieId">see more</a>
         }
     }
     else
@@ -86,7 +86,7 @@
         </div>
         @if (Model.Movie.Screenings.Count() == 4)
         {
-            <a href="#">see more</a>
+            <a asp-page="../Screenings/ScreeningsOfMovie" asp-route-id="@Model.Movie.MovieId">see more</a>
         }
     }
     else
@@ -119,7 +119,7 @@
             }
             @if (Model.Movie.Reviews.Count() == 4)
             {
-                <a href="#">see more</a>
+                <a asp-page="../Reviews/ReviewsOfMovie" asp-route-id="@Model.Movie.MovieId">see more</a>
             }
         </div>
     }

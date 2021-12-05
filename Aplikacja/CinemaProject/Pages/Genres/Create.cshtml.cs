@@ -30,6 +30,14 @@ namespace CinemaProject.Pages.Genres
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Genres.Count() != 0)
+            {
+                decimal id = _context.Genres
+                .Select(x => x.GenreId)
+                .Max();
+                Genre.GenreId = id + 1;
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

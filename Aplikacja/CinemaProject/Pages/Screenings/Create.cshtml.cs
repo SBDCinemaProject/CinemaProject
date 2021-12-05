@@ -33,6 +33,14 @@ namespace CinemaProject.Pages.Screenings
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Screenings.Count() != 0)
+            {
+                decimal id = _context.Screenings
+                .Select(x => x.ScreeningId)
+                .Max();
+                Screening.ScreeningId = id + 1;
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

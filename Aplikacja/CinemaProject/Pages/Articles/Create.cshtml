@@ -14,11 +14,6 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Article.ArticleId" class="control-label"></label>
-                <input asp-for="Article.ArticleId" class="form-control" />
-                <span asp-validation-for="Article.ArticleId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Article.Content" class="control-label"></label>
                 <textarea asp-for="Article.Content" class="form-control" rows="4" ></textarea>
                 <span asp-validation-for="Article.Content" class="text-danger"></span>

@@ -31,6 +31,14 @@ namespace CinemaProject.Pages.Rooms
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Rooms.Count() != 0)
+            {
+                decimal id = _context.Rooms
+                .Select(x => x.RoomId)
+                .Max();
+                Room.RoomId = id + 1;
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

@@ -32,6 +32,14 @@ namespace CinemaProject.Pages.Reviews
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Reviews.Count() != 0)
+            {
+                decimal id = _context.Reviews
+                .Select(x => x.ReviewId)
+                .Max();
+                Review.ReviewId = id + 1;
+            }
             Review.Creationdate = DateTime.Now;
             if (!ModelState.IsValid)
             {

@@ -30,6 +30,14 @@ namespace CinemaProject.Pages.Directors
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Directors.Count() != 0)
+            {
+                decimal id = _context.Directors
+                .Select(x => x.DirectorId)
+                .Max();
+                Director.DirectorId = id + 1;
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

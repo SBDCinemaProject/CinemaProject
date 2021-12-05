@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -38,13 +39,28 @@
                     </form>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <a class="col-auto nav-link text-dark" style="margin-left: auto" asp-page="/UserAccountIndex">My Profile</a>
+                        @if (User.HasClaim(ClaimTypes.Role, "Worker"))
+                        {
+                            <a class="col-auto nav-link text-dark" style="margin-left: auto" asp-page="/EmployeeAccountIndex">My Profile</a>
+                        }
+                        else
+                        {
+                            <a class="col-auto nav-link text-dark" style="margin-left: auto" asp-page="/UserAccountIndex">My Profile</a>
+                        }
                         <a class="col-auto nav-link text-dark" asp-page="/Logout">Sign out</a>
                     }
                     else
                     {
                         <a class="nav-link text-dark" style="margin-left: auto" asp-page="/Users/Create">Register</a>
-                        <a class="nav-link text-dark" asp-page="/Login">Sign in</a>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle nav-link text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sign in
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" asp-page="/Login">User</a>
+                                <a class="dropdown-item" asp-page="/LoginEmployee">Employee</a>
+                            </div>
+                        </div>
                     }
 
                     <div>

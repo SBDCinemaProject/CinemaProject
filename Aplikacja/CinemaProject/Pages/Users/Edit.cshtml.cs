@@ -37,6 +37,44 @@ namespace CinemaProject.Pages.Users
             }
             return Page();
         }
+        public IActionResult OnPostUserData()
+        {
+            if (ThisUser.Password == null)
+            {
+                User TempUser = _context.Users
+                           .Where(x => x.UserId == ThisUser.UserId)
+                           .FirstOrDefault();
+                ThisUser.Password = TempUser.Password;
+                _context.Entry(TempUser).State = EntityState.Detached;
+            }
+
+            ModelState.ClearValidationState(nameof(ThisUser));
+            ModelState.Clear();
+            if (!TryValidateModel(ThisUser, nameof(ThisUser)))
+            {
+                return Page();
+            }
+
+            _context.Attach(ThisUser).State = EntityState.Modified;
+
+            try
+            {
+                _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserExists(ThisUser.UserId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return RedirectToPage("../UserAccountIndex");
+        }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://aka.ms/RazorPagesCRUD.
@@ -67,7 +105,7 @@ namespace CinemaProject.Pages.Users
 
             return RedirectToPage("./Index");
         }
-
+      
         private bool UserExists(decimal id)
         {
             return _context.Users.Any(e => e.UserId == id);

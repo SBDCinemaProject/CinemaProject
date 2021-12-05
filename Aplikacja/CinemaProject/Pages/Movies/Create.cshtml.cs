@@ -31,6 +31,14 @@ namespace CinemaProject.Pages.Movies
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            //Find last id
+            if (_context.Movies.Count() != 0)
+            {
+                decimal id = _context.Movies
+                .Select(x => x.MovieId)
+                .Max();
+                Movie.MovieId = id + 1;
+            }
             if (!ModelState.IsValid)
             {
                 return Page();
