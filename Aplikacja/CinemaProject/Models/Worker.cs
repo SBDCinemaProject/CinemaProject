@@ -27,6 +27,8 @@ namespace CinemaProject.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [Required]
+        public string Email { get; set; }
 
         public virtual Cinema CinemaCinema { get; set; }
         public virtual ICollection<Article> Articles { get; set; }

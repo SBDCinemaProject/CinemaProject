@@ -15,7 +15,7 @@ namespace CinemaProject.Pages
     {
         private readonly CinemaProject.Models.ModelContext _context;
         [BindProperty]
-        public string Surname { get; set; }
+        public string Email { get; set; }
         [BindProperty]
         public string Password { get; set; }
         public Worker Worker { get; set; }
@@ -30,7 +30,7 @@ namespace CinemaProject.Pages
         public ActionResult OnPost()
         {
             Worker = _context.Workers
-                   .Where(x => x.Surname == Surname && x.Password == Password)
+                   .Where(x => x.Email == Email && x.Password == Password)
                    .FirstOrDefault();
             if (Worker == null)
             {
@@ -39,7 +39,7 @@ namespace CinemaProject.Pages
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, Worker.WorkerId.ToString()),
-                new Claim(ClaimTypes.Name, Worker.Surname),
+                new Claim(ClaimTypes.Name, Worker.Email),
                 new Claim(ClaimTypes.Role, "Worker"),
             };
 

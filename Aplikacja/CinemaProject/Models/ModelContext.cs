@@ -479,6 +479,10 @@ namespace CinemaProject.Models
                     .HasColumnType("NUMBER")
                     .HasColumnName("ROOM_ROOM_ID");
 
+                entity.Property(e => e.ScreeningDate)
+                    .HasColumnName("SCREENING_DATE")
+                    .HasColumnType("DATE");                 
+
                 entity.HasOne(d => d.LanguageversionLv)
                     .WithMany(p => p.Screenings)
                     .HasForeignKey(d => d.LanguageversionLvId)
@@ -622,6 +626,11 @@ namespace CinemaProject.Models
                     .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("SURNAME");
+
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnName("EMAIL");
 
                 entity.HasOne(d => d.CinemaCinema)
                     .WithMany(p => p.Workers)

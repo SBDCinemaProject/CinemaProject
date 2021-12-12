@@ -22,6 +22,7 @@ namespace CinemaProject.Models
         public decimal? Price { get; set; }
         [Required]
         public decimal LanguageversionLvId { get; set; }
+        public DateTime ScreeningDate { get; set; }
 
         public virtual Languageversion LanguageversionLv { get; set; }
         public virtual Movie MovieMovie { get; set; }

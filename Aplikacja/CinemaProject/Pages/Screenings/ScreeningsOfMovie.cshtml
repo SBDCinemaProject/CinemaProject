@@ -22,6 +22,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Screenings[0].RoomRoom.Name)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Screenings[0].ScreeningDate)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -41,7 +44,10 @@
                 @Html.DisplayFor(modelItem => item.RoomRoom.Name)
             </td>
             <td>
-                <a asp-page="./ScreeningPage" asp-route-id="@item.ScreeningId">Details</a> 
+                @Html.DisplayFor(modelItem => item.ScreeningDate)
+            </td>
+            <td>
+                <a asp-page="./ScreeningPage" asp-route-id="@item.ScreeningId">Details</a>
             </td>
         </tr>
 }

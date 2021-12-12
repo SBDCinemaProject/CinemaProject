@@ -1,4 +1,5 @@
 using CinemaProject.Models;
+using CinemaProject.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,7 @@ namespace CinemaProject
             .AddCookie(options =>
                 options.LoginPath = "/Login");
             services.AddDbContext<ModelContext>();
+            services.AddSingleton<SendEmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

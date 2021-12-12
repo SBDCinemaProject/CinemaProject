@@ -28,7 +28,7 @@ namespace CinemaProject.Pages.Movies
             Movie = _context.Movies
                     .Include(m => m.GenreGenre)
                     .Include(m => m.Reviews).ThenInclude(n => n.UserUser)
-                    .Include(m => m.Screenings.OrderBy(p => p.Price)).ThenInclude(n => n.RoomRoom).ThenInclude(o => o.CinemaCinema)
+                    .Include(m => m.Screenings.OrderBy(p => p.ScreeningDate)).ThenInclude(n => n.RoomRoom).ThenInclude(o => o.CinemaCinema)
                     .Include(m => m.Movieactors).ThenInclude(n => n.ActorActor)
                     .Include(m => m.Moviedirectors).ThenInclude(n => n.DirectorDirector)
                     .FirstOrDefault(m => m.MovieId == id);

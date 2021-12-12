@@ -33,7 +33,7 @@ namespace CinemaProject.Pages
                    .Select(c => c.Value).SingleOrDefault());
                 Search searchDatabase = new Search()
                 {
-                    Content = search,
+                    Content = search ?? " ",
                     Category = selectedValue,
                     UserUserId = userId,
                 };

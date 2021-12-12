@@ -3,14 +3,17 @@
 @{
 }
 <div>
+    <div id="message" class="alert alert-danger display-none" role="alert">
+        This screening is <a href="#" class="alert-link">expired</a>. See another screenings <a asp-page="./ScreeningsOfMovie" asp-route-id="@Model.Screening.MovieMovieId">here</a>
+    </div>
     <div class="row">
         <div class="col-sm-8">
             <h2>@Model.Screening.MovieMovie.Name</h2>
-            <h5 style="color:gray">@Model.Screening.MovieMovie.Productionyear</h5>
+            <h5 style="color:gray">@Model.Screening.ScreeningDate</h5>
             <h5> <a asp-page="../Genres/Details" asp-route-id="@Model.Screening.MovieMovie.GenreGenre.GenreId">@Model.Screening.MovieMovie.GenreGenre.Name</a></h5>
         </div>
         <div class="col-sm-4">
-            <button class="btn btn-info float-right ">
+            <button id="buttonTicket" class="btn btn-info float-right">
                 Buy Ticket
             </button>
         </div>
@@ -65,3 +68,16 @@
     </p>
     <a asp-page="../Movies/MoviePage" asp-route-id="@Model.Screening.MovieMovie.MovieId">see full movie page</a>
 </div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            debugger;
+            var ScreeningDate = new Date("@Model.Screening.ScreeningDate.Year", "@Model.Screening.ScreeningDate.Day", "@Model.Screening.ScreeningDate.Month");
+            if (ScreeningDate < Date.now()) {
+                $("#message").removeClass("display-none");
+                $("#buttonTicket").prop('disabled', true);
+            }
+        });
+    </script>
+}

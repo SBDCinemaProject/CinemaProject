@@ -53,7 +53,7 @@ namespace CinemaProject.Pages.Searches
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../UserAccountIndex");
         }
     }
 }

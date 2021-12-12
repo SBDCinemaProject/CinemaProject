@@ -15,11 +15,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Screening.MovieMovieId" class="control-label"></label>
-                <select asp-for="Screening.MovieMovieId" class ="form-control" asp-items="ViewBag.MovieMovieId"></select>
+                <select asp-for="Screening.MovieMovieId" class="form-control" asp-items="ViewBag.MovieMovieId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Screening.RoomRoomId" class="control-label"></label>
-                <select asp-for="Screening.RoomRoomId" class ="form-control" asp-items="ViewBag.RoomRoomId"></select>
+                <select asp-for="Screening.RoomRoomId" class="form-control" asp-items="ViewBag.RoomRoomId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Screening.Price" class="control-label"></label>
@@ -28,7 +28,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Screening.LanguageversionLvId" class="control-label"></label>
-                <select asp-for="Screening.LanguageversionLvId" class ="form-control" asp-items="ViewBag.LanguageversionLvId"></select>
+                <select asp-for="Screening.LanguageversionLvId" class="form-control" asp-items="ViewBag.LanguageversionLvId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Screening.ScreeningDate" class="control-label"></label>
+                <input asp-for="Screening.ScreeningDate" class="form-control" />
+                <span asp-validation-for="Screening.ScreeningDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
