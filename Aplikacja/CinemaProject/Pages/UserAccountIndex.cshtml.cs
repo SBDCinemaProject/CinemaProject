@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CinemaProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace CinemaProject.Pages
 {
@@ -26,6 +27,7 @@ namespace CinemaProject.Pages
                    .Select(c => c.Value).SingleOrDefault());
 
                 ThisUser = _context.Users
+                   .Include(x => x.Tickets).ThenInclude(y => y.ScreeningScreening).ThenInclude(z => z.MovieMovie)
                    .Where(x => x.UserId == userId)
                    .FirstOrDefault();
                 if (User == null)

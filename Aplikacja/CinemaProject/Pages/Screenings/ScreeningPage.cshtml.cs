@@ -18,6 +18,10 @@ namespace CinemaProject.Pages.Screenings
             _context = context;           
         }
         public Screening Screening { get; set; }
+
+        [BindProperty]
+        public Ticket Ticket { get; set; }
+
         public List<Screening> ScreeningDifferentLanguageVersions { get; set; }
         public ActionResult OnGet(decimal? id)
         {
@@ -41,5 +45,20 @@ namespace CinemaProject.Pages.Screenings
                                                 .ToList();
             return Page();
         }
+
+        public async Task<IActionResult> OnPostCreateTicket()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _context.Tickets.Add(Ticket);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage("./Index");
+        }
+
+        
     }
 }

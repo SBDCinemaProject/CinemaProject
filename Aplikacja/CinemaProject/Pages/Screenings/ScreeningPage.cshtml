@@ -13,9 +13,22 @@
             <h5> <a asp-page="../Genres/Details" asp-route-id="@Model.Screening.MovieMovie.GenreGenre.GenreId">@Model.Screening.MovieMovie.GenreGenre.Name</a></h5>
         </div>
         <div class="col-sm-4">
-            <button id="buttonTicket" class="btn btn-info float-right">
-                Buy Ticket
-            </button>
+            <form method="post">
+                <div type="hidden" asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input type="hidden" asp-for="Ticket.UserUserId" class="form-control" value="michalkrol917@gmail.com"/>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" asp-for="Ticket.ScreeningScreeningId" class="form-control" value="@Model.Screening.ScreeningId"/>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" asp-for="Ticket.Date" class="form-control" value="@Model.Screening.ScreeningDate" />
+                    <span type="hidden" asp-validation-for="Ticket.Date" class="text-danger"></span>
+                </div>
+                <button asp-page-handler="CreateTicket" id="buttonTicket" class="btn btn-info float-right">
+                    Buy Ticket
+                </button>
+            </form>
         </div>
     </div>
     <hr />
