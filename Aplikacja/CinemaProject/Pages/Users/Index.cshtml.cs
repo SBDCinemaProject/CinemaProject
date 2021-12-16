@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using CinemaProject.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CinemaProject.Pages.Users
 {
+    [Authorize(Roles = "Worker")]
     public class IndexModel : PageModel
     {
         private readonly CinemaProject.Models.ModelContext _context;

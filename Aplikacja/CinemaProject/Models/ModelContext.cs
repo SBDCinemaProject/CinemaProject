@@ -549,13 +549,13 @@ namespace CinemaProject.Models
                 entity.HasOne(d => d.ScreeningScreening)
                     .WithMany(p => p.Tickets)
                     .HasForeignKey(d => d.ScreeningScreeningId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("TICKET_SCREENING_FK");
 
                 entity.HasOne(d => d.UserUser)
                     .WithMany(p => p.Tickets)
                     .HasForeignKey(d => d.UserUserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("TICKET_USER_FK");
             });
 

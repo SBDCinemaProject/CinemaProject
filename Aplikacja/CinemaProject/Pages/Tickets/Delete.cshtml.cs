@@ -21,16 +21,18 @@ namespace CinemaProject.Pages.Tickets
         [BindProperty]
         public Ticket Ticket { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(decimal? id)
+        public async Task<IActionResult> OnGetAsync(decimal? userId, decimal? screeningId)
         {
-            if (id == null)
+            if (userId == null || screeningId == null)
             {
                 return NotFound();
             }
 
             Ticket = await _context.Tickets
                 .Include(t => t.ScreeningScreening)
-                .Include(t => t.UserUser).FirstOrDefaultAsync(m => m.UserUserId == id);
+                .Include(t => t.UserUser)
+                .Where(x => x.ScreeningScreeningId == screeningId && x.UserUserId == userId)
+                .FirstOrDefaultAsync();
 
             if (Ticket == null)
             {
@@ -39,14 +41,14 @@ namespace CinemaProject.Pages.Tickets
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(decimal? id)
+        public async Task<IActionResult> OnPostAsync(decimal? userId, decimal? screeningId)
         {
-            if (id == null)
+            if (userId == null || screeningId == null)
             {
                 return NotFound();
             }
 
-            Ticket = await _context.Tickets.FindAsync(id);
+            Ticket = await _context.Tickets.FindAsync(userId, screeningId);
 
             if (Ticket != null)
             {
@@ -54,7 +56,7 @@ namespace CinemaProject.Pages.Tickets
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
     }
 }

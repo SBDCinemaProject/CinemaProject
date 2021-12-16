@@ -38,13 +38,11 @@ namespace CinemaProject.Pages.Tickets
             ViewData["UserUserId"] = new SelectList(_context.Users, "UserId", "Email");
             var SessionScreening =
             HttpContext.Session.GetString("Screening");
-
           
                 Screening =
                 JsonConvert.DeserializeObject<Screening>(SessionScreening);
             var SessionUser =
             HttpContext.Session.GetString("User");
-
 
             ThisUser =
             JsonConvert.DeserializeObject<User>(SessionUser);
@@ -55,6 +53,7 @@ namespace CinemaProject.Pages.Tickets
         {
             Ticket ticket1 = _context.Tickets
                 .Find(Ticket.UserUserId, Ticket.ScreeningScreeningId);
+
             if (ticket1!=null)
             {
                 return RedirectToPage("./BoughtTicket");
@@ -62,12 +61,17 @@ namespace CinemaProject.Pages.Tickets
 
             _context.Tickets.Add(Ticket);
             await _context.SaveChangesAsync();
-            User user = _context.Users
-                        .Where(x => x.UserId == Ticket.UserUserId).FirstOrDefault();
-            Screening screening = _context.Screenings
+            string userEmail = _context.Users
+                        .Where(x => x.UserId == Ticket.UserUserId)
+                        .Select(x => x.Email)
+                        .FirstOrDefault();
+            string movieName = _context.Screenings
                         .Where(x => x.ScreeningId == Ticket.ScreeningScreeningId)
-                        .Include(x => x.MovieMovie).FirstOrDefault();
-            _sendEmailService.SendEmailTicket(user.Email, screening.MovieMovie.Name);
+                        .Include(x => x.MovieMovie)
+                        .Select(x => x.MovieMovie.Name)
+                        .FirstOrDefault();
+
+            _sendEmailService.SendEmailTicket(userEmail, movieName);
 
            return RedirectToPage("../UserAccountIndex");
         }

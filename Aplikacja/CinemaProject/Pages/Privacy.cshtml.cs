@@ -14,19 +14,16 @@ namespace CinemaProject.Pages
     public class PrivacyModel : PageModel
     {
         private readonly ILogger<PrivacyModel> _logger;
-        private readonly SendEmailService _sendEmail;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger, SendEmailService sendEmailService)
+        public PrivacyModel(ILogger<PrivacyModel> logger)
         {
             _logger = logger;
-            _sendEmail = sendEmailService;
         }
         public void OnGet()
         {
         }
         public ActionResult OnPost()
         {
-            _sendEmail.SendEmailTicket("activatorkosz@o2.pl", "przykładowy film");
             return Page();
         }
     }

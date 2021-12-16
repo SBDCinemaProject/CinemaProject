@@ -6,9 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using CinemaProject.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CinemaProject.Pages.Users
-{
+{    
     public class CreateModel : PageModel
     {
         private readonly CinemaProject.Models.ModelContext _context;
@@ -54,7 +55,7 @@ namespace CinemaProject.Pages.Users
             _context.Users.Add(ThisUser);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
     }
 }

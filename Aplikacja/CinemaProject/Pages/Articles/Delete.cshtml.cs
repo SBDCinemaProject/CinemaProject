@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using CinemaProject.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CinemaProject.Pages.Articles
 {
+    [Authorize(Roles = "Worker")]
     public class DeleteModel : PageModel
     {
         private readonly CinemaProject.Models.ModelContext _context;

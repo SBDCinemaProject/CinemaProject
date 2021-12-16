@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CinemaProject.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CinemaProject.Pages.Articles
 {
+    [Authorize(Roles = "Worker")]
     public class EditModel : PageModel
     {
         private readonly CinemaProject.Models.ModelContext _context;

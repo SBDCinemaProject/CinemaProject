@@ -24,6 +24,8 @@ namespace CinemaProject.Pages.Screenings
             Screenings = _context.Screenings
                     .Where(x => x.MovieMovie.Name.ToLower().Contains(search))
                     .Include(x => x.MovieMovie)
+                    .Include(x => x.RoomRoom)
+                    .Include(x => x.LanguageversionLv)
                     .ToList();
             return Page();
         }

@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using CinemaProject.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CinemaProject.Pages.Screenings
 {
+    [Authorize(Roles = "employee")]
     public class CreateModel : PageModel
     {
         private readonly CinemaProject.Models.ModelContext _context;
