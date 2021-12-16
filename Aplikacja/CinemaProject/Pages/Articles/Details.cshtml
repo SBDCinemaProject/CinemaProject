@@ -1,4 +1,5 @@
 ﻿@page
+@using System.Security.Claims;
 @model CinemaProject.Pages.Articles.DetailsModel
 
 @{
@@ -32,6 +33,9 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Article.ArticleId">Edit</a> |
+    @if (User.HasClaim(ClaimTypes.Role, "Worker"))
+    {
+        <a asp-page="./Edit" asp-route-id="@Model.Article.ArticleId">Edit</a> <b>|</b>
+               }
     <a asp-page="./Index">Back to List</a>
 </div>
