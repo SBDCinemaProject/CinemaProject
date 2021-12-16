@@ -3,7 +3,7 @@
 @{
 }
 
-<h1>Buy tocket</h1>
+<h1>Buy ticket</h1>
 
 <h4>Ticket</h4>
 <hr />
@@ -14,28 +14,24 @@
             <input type="hidden" asp-for="Screening.ScreeningId" />
             <div class="form-group">
                 <label asp-for="Ticket.UserUserId" class="control-label"></label>
-                <input asp-for="Ticket.UserUserId" class="form-control" value="@((int)Model.ThisUser.UserId)" />
+                <input readonly asp-for="Ticket.UserUserId" class="form-control" value="@((int)Model.ThisUser.UserId)" />
                 
             </div>
             <div class="form-group">
                 <label asp-for="Ticket.ScreeningScreeningId" class="control-label"></label>
-                <input asp-for="Ticket.ScreeningScreeningId" class="form-control" value="@((int)Model.Screening.ScreeningId)" />
+                <input readonly asp-for="Ticket.ScreeningScreeningId" class="form-control" value="@((int)Model.Screening.ScreeningId)" />
             
             </div>
             <div class="form-group">
                 <label asp-for="Ticket.Date" class="control-label"></label>
-                <input asp-for="Ticket.Date" class="form-control" value="@DateTime.Now.ToString()" />
+                <input readonly asp-for="Ticket.Date" class="form-control" value="@Model.Screening.ScreeningDate.ToString("yyyy-MM-dd")" />
 
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Buy" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {
