@@ -29,6 +29,16 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Director.Birthday)
         </dd>
+        <dt class="col-sm-2">Awards</dt>
+        <dd class="col-sm-10">
+            @if (Model.Director.Directorawards.Count() != 0)
+                @foreach (var director in Model.Director.Directorawards)
+                {
+                    <a asp-page="../Awards/Details" asp-route-id="@director.AwardAwardId" class="card-link">@Html.DisplayFor(model => model.Director.Directorawards)</a>
+                }
+                else
+                {<p>0</p>}
+        </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Director.Nationality)
         </dt>

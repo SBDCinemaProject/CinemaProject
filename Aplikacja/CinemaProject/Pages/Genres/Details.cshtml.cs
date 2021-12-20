@@ -27,7 +27,7 @@ namespace CinemaProject.Pages.Genres
                 return NotFound();
             }
 
-            Genre = await _context.Genres.FirstOrDefaultAsync(m => m.GenreId == id);
+            Genre = await _context.Genres.Include(x => x.Movies).FirstOrDefaultAsync(m => m.GenreId == id);
 
             if (Genre == null)
             {

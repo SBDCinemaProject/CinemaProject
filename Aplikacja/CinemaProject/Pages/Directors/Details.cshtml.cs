@@ -27,7 +27,7 @@ namespace CinemaProject.Pages.Directors
                 return NotFound();
             }
 
-            Director = await _context.Directors.FirstOrDefaultAsync(m => m.DirectorId == id);
+            Director = await _context.Directors.Include(a => a.Directorawards).FirstOrDefaultAsync(m => m.DirectorId == id);
 
             if (Director == null)
             {

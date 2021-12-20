@@ -27,7 +27,7 @@ namespace CinemaProject.Pages.Actors
                 return NotFound();
             }
 
-            Actor = await _context.Actors.FirstOrDefaultAsync(m => m.ActorId == id);
+            Actor = await _context.Actors.Include(a => a.Actorawards).FirstOrDefaultAsync(m => m.ActorId == id);
 
             if (Actor == null)
             {

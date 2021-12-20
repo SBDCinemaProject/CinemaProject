@@ -8,16 +8,40 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Genre</h4>
+    <h4>@Model.Genre.Name</h4>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Genre.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Genre.Name)
-        </dd>
-    </dl>
+    @if (Model.Genre.Movies.Count() != 0)
+    {
+        foreach (var movie in Model.Genre.Movies)
+        {
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Name
+                </dt>
+                <dd class="col-sm-10">
+                    @movie.Name
+                </dd>
+                <dt class="col-sm-2">
+                    Description
+                </dt>
+                <dd class="col-sm-10">
+                    @movie.Description
+                </dd>
+                <dt class="col-sm-2">
+                    Production year
+                </dt>
+                <dd class="col-sm-10">
+                    @movie.Productionyear
+                </dd>
+                <dt class="col-sm-2">
+                    Country
+                </dt>
+                <dd class="col-sm-10">
+                    @movie.Country
+                </dd>
+            </dl>
+        }
+    }
 </div>
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Genre.GenreId">Edit</a> |
