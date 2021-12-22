@@ -34,7 +34,7 @@
             @if (Model.Actor.Actorawards.Count() != 0)
                 @foreach (var actor in Model.Actor.Actorawards)
                 {
-                    <a asp-page="../Awards/Details" asp-route-id="@actor.AwardAwardId" class="card-link">@Html.DisplayFor(model => model.Actor.Actorawards)</a>
+                    <a asp-page="../Awards/Details" asp-route-id="@actor.AwardAwardId" class="card-link">@Html.DisplayFor(model => model.Actor.Actorawards.ElementAt(0).AwardAward.Name)</a>
                 }
                 else
                 {<p>0</p>}

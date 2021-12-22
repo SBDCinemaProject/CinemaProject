@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Details";
 }
-
+@using System.Security.Claims
 <h1>Details</h1>
 
 <div>
@@ -43,7 +43,20 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Review.ReviewId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
-</div>
+@if (User.Identity.IsAuthenticated && User.FindFirst(ClaimTypes.NameIdentifier).Value == Model.Review.UserUserId.ToString())
+{
+    <div class="m-2">
+        <a asp-page="./Edit" asp-route-id="@Model.Review.ReviewId">Edit</a> |
+        <a asp-page="../Index">Back to List</a>
+    </div>
+    <div>
+        <a class="btn btn-danger" asp-page="./Delete" asp-route-userId="@Model.Review.UserUserId" asp-route-movieId="@Model.Review.MovieMovieId">Delete</a>
+    </div>
+}
+else
+{
+    <div class="m-2">
+        <a asp-page="../Index">Back to List</a>
+    </div>
+}
+

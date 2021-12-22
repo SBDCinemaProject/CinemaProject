@@ -8,7 +8,7 @@
 <h1>Details</h1>
 
 <div>
-    <h4>@Model.Genre.Name</h4>
+    <h4>Movies with #@Model.Genre.Name Genre</h4>
     <hr />
     @if (Model.Genre.Movies.Count() != 0)
     {
@@ -44,6 +44,5 @@
     }
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Genre.GenreId">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

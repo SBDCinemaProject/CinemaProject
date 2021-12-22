@@ -21,16 +21,17 @@ namespace CinemaProject.Pages.ActorAwards
         [BindProperty]
         public Actoraward Actoraward { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(decimal? id)
+        public async Task<IActionResult> OnGetAsync(decimal? actorId, decimal? awardId)
         {
-            if (id == null)
+            if (actorId == null || awardId == null)
             {
                 return NotFound();
             }
 
             Actoraward = await _context.Actorawards
-                .Include(a => a.ActorActor)
-                .Include(a => a.AwardAward).FirstOrDefaultAsync(m => m.ActorActorId == id);
+                .Include(a => a.ActorActor).Where(m => m.ActorActorId == actorId)
+                .Include(a => a.AwardAward).Where(m => m.AwardAwardId == awardId)
+                .FirstOrDefaultAsync();
 
             if (Actoraward == null)
             {
@@ -39,14 +40,14 @@ namespace CinemaProject.Pages.ActorAwards
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(decimal? id)
+        public async Task<IActionResult> OnPostAsync(decimal? actorId, decimal? awardId)
         {
-            if (id == null)
+            if (actorId == null || awardId == null)
             {
                 return NotFound();
             }
 
-            Actoraward = await _context.Actorawards.FindAsync(id);
+            Actoraward = await _context.Actorawards.FindAsync(actorId, awardId);
 
             if (Actoraward != null)
             {

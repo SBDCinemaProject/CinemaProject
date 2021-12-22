@@ -21,16 +21,18 @@ namespace CinemaProject.Pages.Reviews
         [BindProperty]
         public Review Review { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(decimal? id)
+        public async Task<IActionResult> OnGetAsync(decimal? movieId, decimal? userId)
         {
-            if (id == null)
+            if (movieId == null || userId == null)
             {
                 return NotFound();
             }
 
             Review = await _context.Reviews
+                .Where(m => m.MovieMovieId == movieId && m.UserUserId == userId)
                 .Include(r => r.MovieMovie)
-                .Include(r => r.UserUser).FirstOrDefaultAsync(m => m.ReviewId == id);
+                .Include(r => r.UserUser)
+                .FirstOrDefaultAsync();
 
             if (Review == null)
             {
@@ -39,14 +41,14 @@ namespace CinemaProject.Pages.Reviews
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(decimal? id)
+        public async Task<IActionResult> OnPostAsync(decimal? movieId, decimal? userId)
         {
-            if (id == null)
+            if (movieId == null || userId == null)
             {
                 return NotFound();
             }
 
-            Review = await _context.Reviews.FindAsync(id);
+            Review = await _context.Reviews.Where(x => x.UserUserId == userId && x.MovieMovieId == movieId).FirstOrDefaultAsync();
 
             if (Review != null)
             {
@@ -54,7 +56,7 @@ namespace CinemaProject.Pages.Reviews
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Movies/MoviePage", new { id = movieId});
         }
     }
 }

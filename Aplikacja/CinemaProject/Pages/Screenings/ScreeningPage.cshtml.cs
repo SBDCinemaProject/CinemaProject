@@ -58,14 +58,25 @@ namespace CinemaProject.Pages.Screenings
                         .Include(m => m.RoomRoom).ThenInclude(n => n.CinemaCinema)
                         .FirstOrDefault(m => m.ScreeningId == id);
 
-            decimal userId = decimal.Parse(User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier)
+            ScreeningDifferentLanguageVersions = _context.Screenings
+                                                .Include(m => m.LanguageversionLv)
+                                                .Where(m => m.MovieMovieId == Screening.MovieMovieId && m.LanguageversionLvId != Screening.LanguageversionLvId)
+                                                .ToList();
+
+            if (User.Identity.IsAuthenticated)
+            {
+                decimal userId = decimal.Parse(User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier)
                    .Select(c => c.Value).SingleOrDefault());
 
-            ThisUser = _context.Users
-               .Include(x => x.Tickets).ThenInclude(y => y.ScreeningScreening).ThenInclude(z => z.MovieMovie)
-               .Where(x => x.UserId == userId)
-               .FirstOrDefault();
-
+                ThisUser = _context.Users
+                   .Include(x => x.Tickets).ThenInclude(y => y.ScreeningScreening).ThenInclude(z => z.MovieMovie)
+                   .Where(x => x.UserId == userId)
+                   .FirstOrDefault();
+            }
+            else
+            {
+                ModelState.AddModelError("notloggedin", "you must to be logged in to buy a ticket");
+            }
 
             if (ModelState.IsValid)
             { 

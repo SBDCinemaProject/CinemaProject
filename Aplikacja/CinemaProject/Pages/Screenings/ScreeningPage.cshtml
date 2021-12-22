@@ -18,12 +18,13 @@
                     Buy Ticket
                 </button>
             </form>
-            
+            @Html.ValidationMessage("notloggedin", new { @class = "text-danger text-right" })
         </div>
+        
     </div>
     <hr />
 
-    <div class="row">
+    <div class="row">       
         <div class="col-sm-4">
             <h5>Room: @Model.Screening.RoomRoom.Name</h5>
         </div>

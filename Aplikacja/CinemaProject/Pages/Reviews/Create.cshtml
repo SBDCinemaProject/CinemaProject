@@ -13,6 +13,7 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <a style="color:red">@Html.ValidationMessage("isInDatabase")</a>
             <div class="form-group">
                 <label asp-for="Review.Content" class="control-label"></label>
                 <textarea asp-for="Review.Content" class="form-control" rows="6"></textarea>
@@ -24,13 +25,17 @@
                 <span asp-validation-for="Review.Rating" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Review.MovieMovieId" class="control-label"></label>
-                <select asp-for="Review.MovieMovieId" class ="form-control" asp-items="ViewBag.MovieMovieId"></select>
+                <label asp-for="Review.MovieMovie.Name" class="control-label"></label>
+                <input asp-for="Review.MovieMovieId" class="form-control" value="@ViewData["MovieName"]" disabled />
+                <span asp-validation-for="Review.MovieMovieId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Review.UserUserId" class="control-label"></label>
-                <select asp-for="Review.UserUserId" class ="form-control" asp-items="ViewBag.UserUserId"></select>
+                <label asp-for="Review.UserUser.Username" class="control-label"></label>
+                <input asp-for="Review.UserUserId" class="form-control" value="@ViewData["Username"]" disabled />
+                <span asp-validation-for="Review.UserUserId" class="text-danger"></span>
             </div>
+            <input asp-for="Review.MovieMovieId" class="form-control" value="@ViewData["MovieId"]" hidden />
+            <input asp-for="Review.UserUserId" class="form-control" value="@ViewData["UserId"]" hidden />
             <div class="form-group">
                 <input asp-for="Review.Creationdate" type="hidden" class="form-control" />
             </div>
@@ -42,7 +47,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="../Index">Back to Main Page</a>
 </div>
 
 @section Scripts {

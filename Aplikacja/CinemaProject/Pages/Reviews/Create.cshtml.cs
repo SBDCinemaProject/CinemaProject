@@ -18,10 +18,16 @@ namespace CinemaProject.Pages.Reviews
             _context = context;
         }
 
-        public IActionResult OnGet()
+        public IActionResult OnGet(decimal? movieId, decimal? userId)
         {
-        ViewData["MovieMovieId"] = new SelectList(_context.Movies, "MovieId", "Name");
-        ViewData["UserUserId"] = new SelectList(_context.Users, "UserId", "Email");
+            if(movieId == null || userId == null)
+            {
+                return NotFound();
+            }
+            ViewData["MovieName"] = _context.Movies.Where(x => x.MovieId == movieId).Select(x => x.Name).FirstOrDefault().ToString();
+            ViewData["Username"] = _context.Users.Where(x => x.UserId == userId).Select(x => x.Username).FirstOrDefault().ToString();
+            ViewData["MovieID"] = movieId;
+            ViewData["UserId"] = userId;
             return Page();
         }
 
@@ -32,6 +38,12 @@ namespace CinemaProject.Pages.Reviews
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            bool isInDatabase = _context.Reviews.Any(x => x.UserUserId == Review.UserUserId && x.MovieMovieId == Review.MovieMovieId);
+            if(isInDatabase)
+            {
+                ModelState.AddModelError("isInDatabase", "You have already posted review");
+                return Page();
+            }
             //Find last id
             if (_context.Reviews.Count() != 0)
             {
@@ -41,6 +53,8 @@ namespace CinemaProject.Pages.Reviews
                 Review.ReviewId = id + 1;
             }
             Review.Creationdate = DateTime.Now;
+            ModelState.Clear();
+            TryValidateModel(Review);
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -49,7 +63,7 @@ namespace CinemaProject.Pages.Reviews
             _context.Reviews.Add(Review);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Movies/MoviePage", new { id = Review.MovieMovieId });
         }
     }
 }
